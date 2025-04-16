@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AlarmDemo</string>
+    <string name="set_alarm">Set Alarm for 10 seconds</string>
+</resources>
