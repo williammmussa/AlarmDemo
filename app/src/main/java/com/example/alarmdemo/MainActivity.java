@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AlarmReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
-        long triggerTime = System.currentTimeMillis() + 10000; // 10 seconds from now
+        long triggerTime = System.currentTimeMillis() + 5000; // 5 seconds from now
 
         if (alarmManager != null) {
             alarmManager.set(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent);
-            Toast.makeText(this, "Alarm is set for 10 seconds later!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Alarm is set for 5 seconds later!", Toast.LENGTH_SHORT).show();
         }
     }
 }

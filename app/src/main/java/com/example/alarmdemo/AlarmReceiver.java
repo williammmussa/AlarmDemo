@@ -14,13 +14,14 @@ public class AlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        //Just chose to implement a notification for demo purposes but anything interesting could be done instead
         createNotification(context);
     }
 
     private void createNotification(Context context) {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // For Android Oreo and above, create a notification channel
+        // For Android Oreo/8 and above, create a notification channel
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
